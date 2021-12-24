@@ -1,0 +1,105 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <?php
+            
+            $server = "localhost";
+            $user = "root";
+            $pass = "";
+            $database = "fivemdb";
+
+            $conn = mysqli_connect($server, $user, $pass, $database);
+
+            $sqlchoose = "select * from report";
+
+            $quest = $conn->prepare($sqlchoose);
+            $quest->execute();
+
+            $answers = $quest->fetchAll();
+
+
+        ?>
+        <script src="script.js"></script>
+
+        <div id="box" class="box">
+            <table class="prva" >
+                <th onclick="disableallexcepta()" id="sve" class="prvi" style="border-top-left-radius: 3px;border-bottom-left-radius: 3px;background-color: blue;">Sve</th>
+                <th onclick="disableallexceptb();" id="report" class="prvi">Reportovi</th>
+                <th onclick="disableallexceptc();" id="ask" class="prvi">Askovi</th>
+                <th onclick="disableallexceptd();" id="kill" class="prvi">Kill Logovi</th>
+                <th onclick="disableallexcepte();" id="exit" class="prvi" style="border-top-right-radius: 3px;border-bottom-right-radius: 3px;">Exit Logovi</th>
+            </table>     
+            
+            <table class="druga">
+                <th >    <input type="checkbox" name="checkBox1" onclick="skroldno();" ></th> <th class="drugi">Skrolaj na dno     </th>                
+                <th >    <input type="checkbox" name="checkBox1" onclick="pokaziask();"></th> <th class="drugi">Prikazi Ask u 'Sve'  </th>             
+                <th >    <input type="checkbox" name="checkBox1" onclick="pokazikill();"></th> <th class="drugi">Prikazi Kill Logove u 'Sve'</th>               
+                <th >    <input type="checkbox" name="checkBox1" onclick="pokaziexit();"></th> <th class="drugi">Prikazi Exit Logove u 'Sve'</th>              
+            </table>
+            
+            <div id="grid-container-sve">
+                <?php foreach($answers as $row){ ?>
+                      <div class="grid-item-report">
+                      <input type="button" id="<?= $row['reportid'] ?>" class="done" value="X" onclick="dodone(<?= $row['reportid'] ?>);">    
+                      <p class="headc">Report: <?= $row['reportername'] ?>[<?= $row['userid'] ?>]</p>
+                      <hr style="color:black;margin:2px;">
+                      <p class="mainc"><?= $row['reportreason'] ?></p>
+                      </div>    
+                  <?php } ?>
+                  <div class="grid-item-ask 2" id="sveask" style="display:none;">
+                    <input type="button"  class="done " value="X" onclick="dodone(2);">    
+                    <p class="headc">Ask: SemirSljiivic[9]</p>
+                    <hr style="color:black;margin:2px;">
+                    <p class="mainc">Radu jebeni szkrdm i sve picke materine pomoc baaaaa</p>
+                </div>
+                <div class="grid-item-death 3" id="svekill" style="display:none;">
+                    <p class="headc">Death-Log:</p>
+                    <hr style="color:black;margin:2px;">
+                    <p class="mainc">Osoba Drkica[5] je ubijena od elise sa strane SemirSljiivic[9]</p>
+                </div>
+                <div class="grid-item-join 4" id="sveexit" style="display:none;">
+                    <p class="headc">Join </p>
+                    <hr style="color:black;margin:2px;">
+                    <p class="mainc">Drkica[6] uradio LTA time.last.sc => 5000ms</p>
+                </div>
+                  
+               </div>
+            <div id="grid-container-report">
+              <?php foreach($answers as $row){ ?>
+                    <div class="grid-item-report" id="<?= $row['reportid'] ?>">
+                    <input type="button"  class="done " value="X" onclick="dodone(<?= $row['reportid'] ?>);">    
+                    <p class="headc">Report: <?= $row['reportername'] ?>[<?= $row['userid'] ?>]</p>
+                    <hr style="color:black;margin:2px;">
+                    <p class="mainc"><?= $row['reportreason'] ?></p>
+                    </div>    
+                <?php } ?>
+                
+             </div>
+             <div id="grid-container-ask">
+                <div class="grid-item-ask 2">
+                    <input type="button"  class="done " value="X" onclick="dodone(2);">    
+                    <p class="headc">Ask: SemirSljiivic[9]</p>
+                    <hr style="color:black;margin:2px;">
+                    <p class="mainc">Radu jebeni szkrdm i sve picke materine pomoc baaaaa</p>
+                </div>
+             </div>   
+             <div id="grid-container-death">
+                <div class="grid-item-death 3">
+                    <p class="headc">Death-Log:</p>
+                    <hr style="color:black;margin:2px;">
+                    <p class="mainc">Osoba Drkica[5] je ubijena od elise sa strane SemirSljiivic[9]</p>
+                </div>
+             </div>   
+             <div id="grid-container-join">
+                <div class="grid-item-join 4">
+                    <p class="headc">Join </p>
+                    <hr style="color:black;margin:2px;">
+                    <p class="mainc">Drkica[6] uradio LTA time.last.sc => 5000ms</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
