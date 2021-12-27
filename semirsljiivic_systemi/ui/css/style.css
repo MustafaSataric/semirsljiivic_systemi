@@ -127,6 +127,7 @@ border-radius: 8px;
 }
 
 .grid-item-ask{
+  display:none;
 width:96%;
 padding:2%;
 margin:2px;
