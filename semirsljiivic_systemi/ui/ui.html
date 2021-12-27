@@ -12,6 +12,9 @@
             var ispit = true;
             var ispit2 = true;
             var ispit3=true;
+            var join = "none";
+            var ask = "none";
+            var kill = "none";
 
             function dodone(x){
                 var elements = document.getElementsByClassName(x);
@@ -21,11 +24,26 @@
 
             }
             function disableallexcepta(){
-                document.getElementById("grid-container-sve").style.display = "block";
-                document.getElementById("grid-container-report").style.display = "none";
-                document.getElementById("grid-container-ask").style.display = "none";
-                document.getElementById("grid-container-death").style.display = "none";
-                document.getElementById("grid-container-join").style.display = "none";
+                var reports = document.getElementsByClassName("grid-item-report");
+                    var i;
+                    for (i = 0; i < reports.length; i++) {
+                    reports[i].style.display = "block";
+                    }
+                    var exits = document.getElementsByClassName("grid-item-join");
+                    var i;
+                    for (i = 0; i < exits.length; i++) {
+                    exits[i].style.display = join;
+                    }
+                var asks = document.getElementsByClassName("grid-item-ask");
+                    var i;
+                    for (i = 0; i < asks.length; i++) {
+                    asks[i].style.display = ask;
+                    } 
+                var deaths = document.getElementsByClassName("grid-item-death");
+                    var i;
+                    for (i = 0; i < deaths.length; i++) {
+                    deaths[i].style.display = kill;
+                    } 
                 document.getElementById("sve").style.backgroundColor = "blue";
                 document.getElementById("report").style.backgroundColor = "gray";
                 document.getElementById("ask").style.backgroundColor = "gray";
@@ -34,11 +52,23 @@
 
             }
             function disableallexceptb(){
-                document.getElementById("grid-container-sve").style.display = "none";
-                document.getElementById("grid-container-report").style.display = "block";
-                document.getElementById("grid-container-ask").style.display = "none";
-                document.getElementById("grid-container-death").style.display = "none";
-                document.getElementById("grid-container-join").style.display = "none";
+                var reports = document.getElementsByClassName("grid-item-report");
+                    var i;
+                    for (i = 0; i < reports.length; i++) {
+                    reports[i].style.display = "block";
+                    }
+                    var exits = document.getElementsByClassName("grid-item-join");
+                    for (i = 0; i < exits.length; i++) {
+                    exits[i].style.display = "none";
+                    }
+                var asks = document.getElementsByClassName("grid-item-ask");
+                    for (i = 0; i < asks.length; i++) {
+                    asks[i].style.display = "none";
+                    } 
+                var deaths = document.getElementsByClassName("grid-item-death");
+                    for (i = 0; i < deaths.length; i++) {
+                    deaths[i].style.display = "none";
+                    } 
                 document.getElementById("sve").style.backgroundColor = "gray";
                 document.getElementById("report").style.backgroundColor = "blue";
                 document.getElementById("ask").style.backgroundColor = "gray";
@@ -46,11 +76,26 @@
                 document.getElementById("exit").style.backgroundColor = "gray";            
             }
             function disableallexceptc(){
-                document.getElementById("grid-container-sve").style.display = "none";
-                document.getElementById("grid-container-report").style.display = "none";
-                document.getElementById("grid-container-ask").style.display = "block";
-                document.getElementById("grid-container-death").style.display = "none";
-                document.getElementById("grid-container-join").style.display = "none";
+                var reports = document.getElementsByClassName("grid-item-report");
+                    var i;
+                    for (i = 0; i < reports.length; i++) {
+                    reports[i].style.display = "none";
+                    }
+                    var exits = document.getElementsByClassName("grid-item-join");
+                    var i;
+                    for (i = 0; i < exits.length; i++) {
+                    exits[i].style.display = "none";
+                    }
+                var asks = document.getElementsByClassName("grid-item-ask");
+                    var i;
+                    for (i = 0; i < asks.length; i++) {
+                    asks[i].style.display = "block";
+                    } 
+                var deaths = document.getElementsByClassName("grid-item-death");
+                    var i;
+                    for (i = 0; i < deaths.length; i++) {
+                    deaths[i].style.display = "none";
+                    } 
                 document.getElementById("sve").style.backgroundColor = "gray";
                 document.getElementById("report").style.backgroundColor = "gray";
                 document.getElementById("ask").style.backgroundColor = "blue";
@@ -58,11 +103,26 @@
                 document.getElementById("exit").style.backgroundColor = "gray";            
             }
             function disableallexceptd(){
-                document.getElementById("grid-container-sve").style.display = "none";
-                document.getElementById("grid-container-report").style.display = "none";
-                document.getElementById("grid-container-ask").style.display = "none";
-                document.getElementById("grid-container-death").style.display = "block";
-                document.getElementById("grid-container-join").style.display = "none";
+                var reports = document.getElementsByClassName("grid-item-report");
+                    var i;
+                    for (i = 0; i < reports.length; i++) {
+                    reports[i].style.display = "none";
+                    }
+                    var exits = document.getElementsByClassName("grid-item-join");
+                    var i;
+                    for (i = 0; i < exits.length; i++) {
+                    exits[i].style.display = "none";
+                    }
+                var asks = document.getElementsByClassName("grid-item-ask");
+                    var i;
+                    for (i = 0; i < asks.length; i++) {
+                    asks[i].style.display = "none";
+                    } 
+                var deaths = document.getElementsByClassName("grid-item-death");
+                    var i;
+                    for (i = 0; i < deaths.length; i++) {
+                    deaths[i].style.display = "block";
+                    } 
                 document.getElementById("sve").style.backgroundColor = "gray";
                 document.getElementById("report").style.backgroundColor = "gray";
                 document.getElementById("ask").style.backgroundColor = "gray";
@@ -70,11 +130,26 @@
                 document.getElementById("exit").style.backgroundColor = "gray";            
             }
             function disableallexcepte(){
-                document.getElementById("grid-container-sve").style.display = "none";
-                document.getElementById("grid-container-report").style.display = "none";
-                document.getElementById("grid-container-ask").style.display = "none";
-                document.getElementById("grid-container-death").style.display = "none";
-                document.getElementById("grid-container-join").style.display = "block";
+                var reports = document.getElementsByClassName("grid-item-report");
+                    var i;
+                    for (i = 0; i < reports.length; i++) {
+                    reports[i].style.display = "none";
+                    }
+                    var exits = document.getElementsByClassName("grid-item-join");
+                    var i;
+                    for (i = 0; i < exits.length; i++) {
+                    exits[i].style.display = "block";
+                    }
+                var asks = document.getElementsByClassName("grid-item-ask");
+                    var i;
+                    for (i = 0; i < asks.length; i++) {
+                    asks[i].style.display = "none";
+                    } 
+                var deaths = document.getElementsByClassName("grid-item-death");
+                    var i;
+                    for (i = 0; i < deaths.length; i++) {
+                    deaths[i].style.display = "none";
+                    } 
                 document.getElementById("sve").style.backgroundColor = "gray";
                 document.getElementById("report").style.backgroundColor = "gray";
                 document.getElementById("ask").style.backgroundColor = "gray";
@@ -83,46 +158,85 @@
             }
 
             function pokaziask(){
-                if(ispit){
-                    document.getElementById("sveask").style.display="block";
+                if(document.getElementById("sve").style.backgroundColor == "blue"){
+                    if(ispit){
+                    var asks = document.getElementsByClassName("grid-item-ask");
+                    var i;
+                    for (i = 0; i < asks.length; i++) {
+                    asks[i].style.display = "block";
+                    }
                     ispit=false;
+                    ask = "block";
                 }
                 else{
-                    document.getElementById("sveask").style.display="none";
+                    var asks = document.getElementsByClassName("grid-item-ask");
+                    var i;
+                    for (i = 0; i < asks.length; i++) {
+                    asks[i].style.display = "none";
+                    }
                     ispit=true;
+                    ask = "none";
                 }
+                }
+                
             }
 
             function pokazikill(){
+                if(document.getElementById("sve").style.backgroundColor == "blue"){
                 if(ispit2){
-                    document.getElementById("svekill").style.display="block";
+                    var deaths = document.getElementsByClassName("grid-item-death");
+                    var i;
+                    for (i = 0; i < deaths.length; i++) {
+                    deaths[i].style.display = "block";
+                    }
                     ispit2=false;
+                    kill = "block";
                 }
                 else{
-                    document.getElementById("svekill").style.display="none";
+                    var deaths = document.getElementsByClassName("grid-item-death");
+                    var i;
+                    for (i = 0; i < deaths.length; i++) {
+                    deaths[i].style.display = "none";
+                    }
                     ispit2=true;
+                    kill = "none";
+                }
                 }
             }
 
             function pokaziexit(){
+                if(document.getElementById("sve").style.backgroundColor == "blue"){
                 if(ispit3){
-                    document.getElementById("sveexit").style.display="block";
+                    var exits = document.getElementsByClassName("grid-item-join");
+                    var i;
+                    for (i = 0; i < exits.length; i++) {
+                    exits[i].style.display = "block";
+                    }
                     ispit3=false;
+                    join = "block";
                 }
                 else{
-                    document.getElementById("sveexit").style.display="none";
+                    var exits = document.getElementsByClassName("grid-item-join");
+                    var i;
+                    for (i = 0; i < exits.length; i++) {
+                    exits[i].style.display = "none";
+                    }
                     ispit3=true;
+                    join = "none";
+                }
                 }
             }
+
+            
         </script>
         
-        <div id="box" class="box hidden">
+        <div id="box" class="box ">
             <table class="prva" >
                 <th onclick="disableallexcepta()" id="sve" class="prvi" style="border-top-left-radius: 3px;border-bottom-left-radius: 3px;background-color: blue;">Sve</th>
                 <th onclick="disableallexceptb();" id="report" class="prvi">Reportovi</th>
                 <th onclick="disableallexceptc();" id="ask" class="prvi">Askovi</th>
-                <th onclick="renderKills();" id="kill" class="prvi">Kill Logovi</th>
-                <th onclick="renderConnections();" id="exit" class="prvi" style="border-top-right-radius: 3px;border-bottom-right-radius: 3px;">Exit Logovi</th>
+                <th onclick="disableallexceptd();" id="kill" class="prvi">Kill Logovi</th>
+                <th onclick="disableallexcepte();" id="exit" class="prvi" style="border-top-right-radius: 3px;border-bottom-right-radius: 3px;">Exit Logovi</th>
             </table>     
             
             <table class="druga">
@@ -133,13 +247,13 @@
             </table>
             
             <div id="grid-container-sve">
-                      <div class="grid-item-report">
-                      <input type="button" id="" class="done" value="X" onclick="">    
+                      <div class="grid-item-report 34">
+                      <input type="button" id="" class="done" value="X" onclick="dodone(34);">    
                       <p class="headc">Report: [9]</p>
                       <hr style="color:black;margin:2px;">
-                      <p class="mainc"></p>
+                      <p class="mainc">Radu jebeni szkrdm i sve picke materine pomoc baaaaa</p>
                       </div>    
-                  <div class="grid-item-ask 2" id="sveask" style="display:none;">
+                  <div class="grid-item-ask 2" >
                     <input type="button"  class="done " value="X" onclick="dodone(2);">    
                     <p class="headc">Ask: SemirSljiivic[9]</p>
                     <hr style="color:black;margin:2px;">
@@ -150,30 +264,13 @@
                    <hr  style="color:black;margin:2px;">
                     <p class="mainc">Osoba Drkica[5] je ubijena od elise sa strane SemirSljiivic[9]</p>
                 </div>
-                <div class="grid-item-join2" style="display:none;" >
+                <div class="grid-item-join " style="display:none;" >
                     <p class="headc">Join </p>
                     <hr style="color:black;margin:2px;">
                     <p class="mainc">Drkica[6] uradio LTA time.last.sc => 5000ms</p>
                 </div>
                   
                </div>
-            <div id="grid-container-report">
-                 
-             </div>
-             <div id="grid-container-ask">
-                <div class="grid-item-ask 2">
-                    <input type="button"  class="done " value="X" onclick="dodone(2);">    
-                    <p class="headc">Ask: SemirSljiivic[9]</p>
-                    <hr style="color:black;margin:2px;">
-                    <p class="mainc">Radu jebeni szkrdm i sve picke materine pomoc baaaaa</p>
-                </div>
-             </div>   
-             <div id="grid-container-death" class="grid-container-death">
-             </div>   
-             <div id="grid-container-join" class="grid-container-join">
-
-                </div>
-            </div>
         </div>
     </body>
 </html>
